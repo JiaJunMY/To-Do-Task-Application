@@ -1,8 +1,11 @@
 # To-Do-Task-Application
 Designed this to-do task mainly for phone sized. The goal of this project is just to familiarize myself more in JavaScript and CSS.
 The goal of this is to add, edit or delete tasks. But mainly have more functionalities like reminder before end date.
+This is just a side project not main so don't expect too much from this haha.
 
 Reminder: The bell (reminder) button still doesn't have functionality yet, will implement hopefully soon.
+
+https://jiajunmy.github.io/To-Do-Task-Application/ <- Live website to try on
 
 Examples:
 - Adding a new Task  <br/>
