@@ -1,0 +1,118 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="overlay hidden" id="overlay"></div>
+    <div class="mainBox" id="mainBox">
+        <div class="containerButton">
+            <button id="AddNewTask" onclick="openNewTask()">Add New To-do Task</button>
+        </div>
+        <h1>Tasks In Progress</h1>
+        <div class="containerTask">
+        </div>
+
+        <div class="addNewTask hidden">
+            <div class="formContainer">
+                <form id="addTaskForm">
+                    <div>
+                        <input type="text" placeholder="Insert title here..." class="newTaskTitle" id="newTaskTitle">
+                    </div>
+                    <div>
+                        <textarea class="newTaskDescription" id="newTaskDescription" placeholder="Insert description here..."></textarea>
+                    </div>
+                    <div>
+                        <label><strong>End of Date:</strong></label>
+                        <input type="datetime-local" placeholder="01-01-01 23:59:59" id="newTaskDate" class="newTaskDate">
+                    </div>
+                    <div>
+                        <label><strong>Priority:</strong></label>
+                        <select name="prioritySelection" id="prioritySelectAdd" class="prioritySelectTask">
+                            <option value="LowPriority">Low</option>
+                            <option value="MildPriority">Mild</option>
+                            <option value="HighPriority">High</option>
+                        </select>
+                    </div>
+                    <div class="formButtons">
+                        <button type="submit" class="submitBtn">Submit</button>
+                        <button type="button" onclick="closeTab()" class="cancelBtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="editExistingTask hidden">
+            <div class="formContainer">
+                <form id="editTaskForm">
+                    <div>
+                        <input type="text" placeholder="Insert title here..." class="editTaskTitle" id="editTaskTitle">
+                    </div>
+                    <div>
+                        <textarea class="editTaskDescription" id="editTaskDescription" placeholder="Insert description here..."></textarea>
+                    </div>
+                    <div>
+                        <label><strong>End of Date:</strong></label>
+                        <input type="datetime-local" placeholder="01-01-01 23:59:59" id="editTaskDate" class="editTaskDate">
+                    </div>
+                    <div>
+                        <label>Priority:</label>
+                        <select name="prioritySelection" id="prioritySelectEdit" class="prioritySelectTask">
+                            <option value="LowPriority">Low</option>
+                            <option value="MildPriority">Mild</option>
+                            <option value="HighPriority">High</option>
+                        </select>
+                    </div>
+                    <div class="formButtons">
+                        <button type="submit" class="submitBtn">Update</button>
+                        <button type="button" onclick="closeTab()" class="cancelBtn">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="submitCurrentTask hidden">
+            <div class="formContainer">
+                <form id="submitTaskForm">
+                    <div class="description">
+                        <p>Have you finished this task before the deadline?</p>
+                        <p>If so, you can press "Yes" to complete the current task.</p>
+                    </div>
+                    <h2>Disclaimer: Completed tasks are irreversible!</h2>
+                    <div class="formButtons">
+                        <button type="submit" class="submitBtn">Yes, I'm sure</button>
+                        <button type="button" onclick="closeTab()" class="cancelBtn">No, go back</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="deleteCurrentTask hidden">
+            <div class="formContainer">
+                <form id="deleteTaskForm">
+                    <div class="description">
+                        <p>Do you wish to delete this current task?</p>
+                    </div>
+                    <h2>Disclaimer: This process is irreversible!</h2>
+                    <div class="formButtons">
+                        <button type="submit" class="submitBtn">Yes, I'm sure</button>
+                        <button type="button" onclick="closeTab()" class="cancelBtn">No, go back</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+        <div class="completedPanel" id="completedPanel">
+            <h2>Tasks Completed</h2>
+            <div class="completedList">
+            </div>
+        </div>
+    </div>
+    <div>
+        <button class="footer" id="footerToggle">▲</button>
+    </div>
+    <script src="index.js"></script>
+</body>
+</html>
